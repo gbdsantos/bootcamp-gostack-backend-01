@@ -58,6 +58,8 @@ function validateProjectId(request, response, next) {
 }
 
 app.use(logRequests);
+app.use('/projects/:id', validateProjectId); // Apply middleware on desired routes
+
 
 app.get('/projects', (request, response) => {
   //console.log('Step 3');
@@ -80,7 +82,7 @@ app.post('/projects', (request, response) => {
   return response.json(project);
 });
 
-app.put('/projects/:id', validateProjectId, (request, response) => {
+app.put('/projects/:id', (request, response) => {
   const { id } = request.params;
   const { title, owner } = request.body;
 
@@ -101,7 +103,7 @@ app.put('/projects/:id', validateProjectId, (request, response) => {
   return response.json(project);
 });
 
-app.delete('/projects/:id', validateProjectId, (request, response) => {
+app.delete('/projects/:id', (request, response) => {
   const { id } = request.params;
 
   const projectIndex = projects.findIndex(project => project.id === id);
