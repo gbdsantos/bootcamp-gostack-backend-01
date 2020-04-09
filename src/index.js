@@ -7,24 +7,50 @@ app.use(express.json());
 
 /**
  * Métodos HTTP
- * 
+ *
  * GET: Buscar informações do back-end
  * POST: Criar uma informação no back-end
  * PUT/PATCH: Alterar uma informação no back-end
- * DELETE: Deletar uma informação no back-end 
+ * DELETE: Deletar uma informação no back-end
  **/
 
 /**
  * Tipos de parâmetros
- * 
+ *
  * Query Params: Filtros e paginação
  * Route Params: Identificar recursos (Atualizar ou Deletar)
  * Request Body: Conteúdo na hora de criar ou editar um recurso (JSON)
  */
 
+/**
+ * Middleware:
+ * É um interceptador de requisições que podem interromper totalmente a
+ * requisição ou alterar dados da requisição.
+ */
+
 const projects = [];
 
+/**
+* Interceptador de requisições(middleware) que mostra de forma detalhada
+* quais rotas da aplicação estão sendo chamadas e quais são os métodos
+*/
+function logRequests(request, response, next) {
+  const { method, url } = request;
+  const logLabel = `[${method.toUpperCase()}] ${url}`;
+
+  //console.log('Step 1');
+  console.time(logLabel);
+
+  next();
+
+  //console.log('Step 2');
+  console.timeEnd(logLabel);
+}
+
+app.use(logRequests);
+
 app.get('/projects', (request, response) => {
+  //console.log('Step 3');
   const { title } = request.query;
 
   const results = title
