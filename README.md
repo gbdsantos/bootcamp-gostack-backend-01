@@ -6,7 +6,7 @@
 
 First Node.js concepts for the **second week(F 02)** of BootStamp GoStack 11.
 
-Project completed on 04/09/2020.
+Project completed on 09/04/2020.
 
 ## ⚙️ Getting Started
 
