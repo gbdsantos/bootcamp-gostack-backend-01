@@ -1,8 +1,8 @@
-<h1 align="center">
-    <img alt="GoStack" src="https://ap.imagensbrasil.org/images/2020/04/09/bootcamp-header.png" width="200px" />
-</h1>
+<p align="center">
+    <img alt="GoStack" src="https://ap.imagensbrasil.org/images/2020/04/09/banner-bootcamp-gostack-11.png" />
+</p>
 
-## :rocket: Back-end with NodeJS
+## :rocket:Back-end with <span style="color:lightgreen;">NodeJS</span>
 
 First Node.js concepts for the **second week(F 02)** of BootStamp GoStack 11.
 
@@ -19,7 +19,7 @@ yarn dev
 ```
 > Access the URL in your browser http: // localhost: 3333
 
-## :man: Author
+## :man_astronaut: Author
 
 **Guilherme Bezerra** ©️
 
