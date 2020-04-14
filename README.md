@@ -4,7 +4,7 @@
 
 ## :rocket:Back-end with <span style="color:lightgreen;">NodeJS</span>
 
-First Node.js concepts for the **second week(F 02)** of BootStamp GoStack 11.
+First Node.js concepts for the **first week(F 02)** of BootStamp GoStack 11.
 
 Project completed on 09/04/2020.
 
